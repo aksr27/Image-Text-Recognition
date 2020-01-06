@@ -6,6 +6,12 @@ import cv2
 # import copy
 
 ap = argparse.ArgumentParser()
+
+ap.add_argument("-i", "--image", type=str,
+	help="path to input image")
+ap.add_argument("-east", "--east", type=str,
+	help="path to input EAST text detector")
+
 args = vars(ap.parse_args())
 
 image = cv2.imread(args["image"])
